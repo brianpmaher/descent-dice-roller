@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta charset="UTF-8">
+  <title>Descent dice roller</title>
+  <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+  <script src="./js/Die.js"></script>
+  <script src="./js/actions.js"></script>
+
+  <div id="dice">
+    <button class="bg-blue die" onclick="addBlueDie()"></button>
+    <button class="bg-red die" onclick="addRedDie()"></button>
+    <button class="bg-yellow die" onclick="addYellowDie()"></button>
+    <button class="bg-green die" onclick="addGreenDie()"></button>
+    <button class="bg-brown die" onclick="addBrownDie()"></button>
+    <button class="bg-gray die" onclick="addGrayDie()"></button>
+    <button class="bg-black die" onclick="addBlackDie()"></button>
+  </div>
+
+  <p id="label">Selected dice</p>
+  <div id="selected-dice"></div>
+
+  <div class="button-group">
+    <button onclick="rollSelectedDice()">Roll</button>
+    <button onclick="resetSelectedDice()">Reset</button>
+  </div>
+</body>
+
+</html>
