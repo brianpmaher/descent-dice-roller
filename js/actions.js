@@ -58,9 +58,9 @@ const rollSelectedDice = () => {
     dieStatsEl.innerHTML = `
       ${miss ? 'X' : ''}
       ${range ? range : ''}
-      ${damage ? Array(damage).fill().map(() => '♥').join('') : ''}
-      ${surge ? '🗲' : ''}
-      ${defense ? Array(defense).fill().map(() => '️⛊').join('') : ''}
+      ${damage ? Array(damage).fill().map(() => '&hearts;&#xFE0E').join('') : ''}
+      ${surge ? '&#9735;&#xFE0E' : ''}
+      ${defense ? Array(defense).fill().map(() => '️&diams;&#xFE0E').join('') : ''}
     `.trim();
 
     while (dieEl.firstChild) {
