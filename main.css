@@ -78,6 +78,10 @@ button:hover {
     font-weight: bold;
 }
 
+.die > span {
+    margin: 3px;
+}
+
 .die:hover {
     cursor: pointer;
 }
