@@ -54,20 +54,42 @@ const rollSelectedDice = () => {
     const result = selectedDice[i].roll();
     console.log(result);
     const { miss, range, damage, surge, defense } = result;
-    const dieStatsEl = document.createElement('p');
-    dieStatsEl.innerHTML = `
-      ${miss ? 'X' : ''}
-      ${range ? range : ''}
-      ${damage ? Array(damage).fill().map(() => '&hearts;&#xFE0E').join('') : ''}
-      ${surge ? '&#9735;&#xFE0E' : ''}
-      ${defense ? Array(defense).fill().map(() => '️&diams;&#xFE0E').join('') : ''}
-    `.trim();
 
+    // Clear previous faces.
     while (dieEl.firstChild) {
       dieEl.removeChild(dieEl.lastChild);
     }
 
-    dieEl.appendChild(dieStatsEl);
+    // Add all new symbols.
+    if (miss) {
+      const missSymbol = document.createElement('span');
+      missSymbol.classList.add('symbol-miss');
+      dieEl.appendChild(missSymbol);
+    }
+
+    if (range) {
+      const rangeSymbol = document.createElement('span');
+      rangeSymbol.innerHTML = range;
+      dieEl.appendChild(rangeSymbol);
+    }
+
+    Array(damage).fill().forEach(() => {
+      const damageSymbol = document.createElement('span');
+      damageSymbol.classList.add('symbol-damage');
+      dieEl.appendChild(damageSymbol);
+    });
+
+    if (surge) {
+      const surgeSymbol = document.createElement('span');
+      surgeSymbol.classList.add('symbol-surge');
+      dieEl.appendChild(surgeSymbol);
+    }
+
+    Array(defense).fill().forEach(() => {
+      const defenseSymbol = document.createElement('span');
+      defenseSymbol.classList.add('symbol-defense');
+      dieEl.appendChild(defenseSymbol);
+    });
   });
 };
 

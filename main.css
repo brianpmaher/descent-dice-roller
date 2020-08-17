@@ -36,7 +36,7 @@ button:hover {
     flex-wrap: wrap;
     min-height: 64px;
     border: 2px solid black;
-    max-width: 700px;
+    max-width: 720px;
     margin-right: auto;
     margin-left: auto;
 }
@@ -72,22 +72,17 @@ button:hover {
     margin: 10px;
     border: 2px solid black;
     border-radius: 5px;
+    overflow-wrap: break-word;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: bold;
 }
 
 .die:hover {
     cursor: pointer;
 }
 
-.die > p {
-    color: white;
-    font-size: 1.4rem;
-    font-weight: bold;
-    margin: 5px;
-    overflow-wrap: break-word;
-    line-height: 1.3;
-}
-
-.die.bg-yellow > p {
+.die.bg-yellow {
     color: black;
 }
 
@@ -117,4 +112,20 @@ button:hover {
 
 .bg-black {
     background-color: #222;
+}
+
+.symbol-miss:before {
+    content: '\2613\00FE0E';
+}
+
+.symbol-damage:before {
+    content: '\2665\00FE0E';
+}
+
+.symbol-surge:before {
+    content: '\26A1\00FE0E';
+}
+
+.symbol-defense:before {
+    content: '\2656\00FE0E';
 }
