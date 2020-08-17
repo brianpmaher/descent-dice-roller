@@ -1,0 +1,23 @@
+{
+  "name": "descent-dice",
+  "version": "1.0.0",
+  "description": "Descent board game dice roller",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brianpmaher/descent-dice-roller.git"
+  },
+  "author": "Brian Maher",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brianpmaher/descent-dice-roller/issues"
+  },
+  "homepage": "https://github.com/brianpmaher/descent-dice-roller#readme",
+  "dependencies": {
+    "http-server": "^0.12.3"
+  }
+}
